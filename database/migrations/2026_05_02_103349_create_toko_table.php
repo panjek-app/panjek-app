@@ -10,21 +10,18 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-{
-    Schema::create('stores', function (Blueprint $table) {
-        $table->id();
-        $table->string('nama');
-        $table->string('alamat'); // Pastikan t-nya kecil
-        $table->timestamps();
-    });
-}
-
+    {
+        Schema::create('toko', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+        });
+    }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('stores');
+        Schema::dropIfExists('toko');
     }
 };
